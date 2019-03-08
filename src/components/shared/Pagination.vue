@@ -7,7 +7,7 @@
                 <li v-if="pageMeta.current_page_number >= 3" class="page-item"
                     data-toggle="tooltip" data-placement="top" title="Go to first page">
                     <a class="page-link"
-                       @click="fetchMore(1, pageMeta.page_size)">
+                       @click="fetchMore(1, pageMeta.requested_page_size)">
                         1
                     </a>
                 </li>
@@ -15,7 +15,7 @@
                 <li v-if="pageMeta.has_prev_page" class="page-item" data-toggle="tooltip" data-placement="top"
                     title="Previous page">
                                 <span class="page-link"
-                                      @click="fetchMore(pageMeta.prev_page_number, pageMeta.page_size)">
+                                      @click="fetchMore(pageMeta.prev_page_number, pageMeta.requested_page_size)">
       {{pageMeta.prev_page_number}}
       </span>
                 </li>
@@ -28,20 +28,20 @@
 
                 <li v-if="pageMeta.has_next_page" class="page-item">
                     <a class="page-link"
-                       @click="fetchMore(pageMeta.next_page_number,pageMeta.page_size)">
+                       @click="fetchMore(pageMeta.next_page_number,pageMeta.requested_page_size)">
 
                         {{pageMeta.next_page_number}}
                     </a>
                 </li>
 
 
-                <li v-if="pageMeta.current_page_number < pageMeta.total_page_count - 1" class="page-item"
+                <li v-if="pageMeta.current_page_number < pageMeta.number_of_pages - 1" class="page-item"
                     data-toggle="tooltip" data-placement="top" title="Go to last page">
                     <a class="page-link"
-                       @click="fetchMore(pageMeta.total_page_count,pageMeta.page_size)">
+                       @click="fetchMore(pageMeta.number_of_pages,pageMeta.requested_page_size)">
 
                         <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only"> {{pageMeta.total_page_count}}</span>
+                        <span class="sr-only"> {{pageMeta.number_of_pages}}</span>
                     </a>
                 </li>
             </ul>

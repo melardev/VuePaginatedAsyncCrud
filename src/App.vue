@@ -269,6 +269,28 @@
         border-color: rgba(0, 0, 0, 0.2)
     }
 
+    .btn-wordpress {
+        color: #fff;
+        background-color: #000000;
+        text-transform: lowercase;
+        border-color: rgba(0, 0, 0, 0.2)
+    }
+
+    .btn-wordpress:hover, .btn-wordpress:focus, .btn-wordpress:active, .btn-wordpress.active, .open .dropdown-toggle.btn-wordpress {
+        color: #000000;
+        background-color: #ffffff;
+        border-color: rgba(0, 0, 0, 0.99)
+    }
+
+    .btn-wordpress:active, .btn-wordpress.active, .open .dropdown-toggle.btn-wordpress {
+        background-image: none
+    }
+
+    .btn-wordpress.disabled, .btn-wordpress[disabled], fieldset[disabled] .btn-wordpress, .btn-wordpress.disabled:hover, .btn-wordpress[disabled]:hover, fieldset[disabled] .btn-wordpress:hover, .btn-wordpress.disabled:focus, .btn-wordpress[disabled]:focus, fieldset[disabled] .btn-wordpress:focus, .btn-wordpress.disabled:active, .btn-wordpress[disabled]:active, fieldset[disabled] .btn-wordpress:active, .btn-wordpress.disabled.active, .btn-wordpress[disabled].active, fieldset[disabled] .btn-wordpress.active {
+        background-color: #63dd39;
+        border-color: rgb(92, 130, 221)
+    }
+
     .btn-instagram {
         color: #fff;
         background-color: #3f729b;

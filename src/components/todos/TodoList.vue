@@ -2,8 +2,6 @@
     <div class="container">
         <h1>Todos</h1>
         <div>
-            <button type="button" class="btn btn-danger" @click='deleteAll()'>Delete All</button>
-            &nbsp;
             <router-link class="btn btn-success" to="/todos/new">Add new</router-link>
         </div>
 
@@ -57,10 +55,9 @@
 <script>
     import {TodoAxiosService} from "../../services/remote/todos.axios.service";
     import Pagination from "../shared/Pagination";
-    import {NotificationService} from "../../services/local/notification.service";
 
     export default {
-        name: "List",
+        name: "TodoList",
         components: {
             appPagination: Pagination
         },
